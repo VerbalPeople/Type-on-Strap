@@ -35,12 +35,22 @@ Check out this tutorial: [Use as Ruby Gem](#use-as-ruby-gem-)
 
 ### As a github page 📋
 
-1. Fork and clone the [Type on Strap repo](https://github.com/sylhare/Type-On-Strap): `git clone https://github.com/Sylhare/Type-on-Strap.git`
-2. Install [Jekyll](https://jekyllrb.com/docs/installation/): `gem install jekyll`, check [#1](https://github.com/Sylhare/Type-on-Strap/issues/1) if you have a problem.
-3. Install the theme's dependencies: `bundle install`
-4. Customize the theme
+1. You only need to fork and clone the [Type on Strap repo](https://github.com/sylhare/Type-On-Strap): `git clone https://github.com/Sylhare/Type-on-Strap.git` if you want to modify it (or, possibly, develop locally).  Otherwise you just need to copy `_config.yml` and the relevant folder structure into the local repo.
+2. Install [Jekyll](https://jekyllrb.com/docs/installation/).  To install Jekyll on macOS, you need a proper Ruby development environment. While macOS comes preinstalled with Ruby, don’t use that version to install Jekyll. Instead, install a separate and newer version of Ruby using a version manager such as `chruby` (it’s the simplest and least likely to cause issues):
+```zsh
+brew install chruby ruby-install
+ruby-install ruby 3.3.5
+# restart shell
+chruby
+echo "source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh" >> ~/.zshrc
+echo "source $(brew --prefix)/opt/chruby/share/chruby/auto.sh" >> ~/.zshrc
+echo "chruby ruby-3.3.5" >> ~/.zshrc # run 'chruby' to see actual version
+```
+3. Now you can `gem install jekyll`, check [#1](https://github.com/Sylhare/Type-on-Strap/issues/1) if you have a problem.
+6. Install the theme's dependencies: `bundle install`
+7. Customize the theme
 	- GitHub Page: [update `_config.yml`](#site-configuration)
-5. Run the Jekyll server: `bundle exec jekyll serve`
+8. Run the Jekyll server: `bundle exec jekyll serve`
 
 ## Structure
 
